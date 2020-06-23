@@ -2,3 +2,4 @@
 /results
 /tests/api.txt
 /resources/lib/__pycache__
+.vscode/
