@@ -19,6 +19,7 @@ Logged With "${email}"
     Go To          ${BASE_URL}
     Input Text     ${INPUT_EMAIL}     ${email}
     Click Element  ${BUTTON_LOGIN}
+    Wait Until Page Contains Element  ${DIV_DASHBOARD}     
     Page Should Contain Element       ${DIV_DASHBOARD}
 
 End Test

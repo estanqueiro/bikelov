@@ -34,7 +34,7 @@ E eu acesso o formulário de cadastro de anúncios
     Click Button        ${BUTTON_ANUNCIAR}
 
 Quando eu faço o anúncio dessa bike
-    Choose File         ${INPUT_THUMBNAIL}   ${CURDIR}/images/${bike_json['thumb']}
+    Choose File         ${INPUT_THUMBNAIL}   ${CURDIR}\\images\\${bike_json['thumb']}
     Clear Element Text  ${INPUT_NAME}
     Input Text          ${INPUT_NAME}        ${bike_json['name']}
     Clear Element Text  ${INPUT_BRAND}
