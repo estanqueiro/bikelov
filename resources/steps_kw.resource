@@ -34,12 +34,12 @@ E eu acesso o formulário de cadastro de anúncios
     Click Button        ${BUTTON_ANUNCIAR}
 
 Quando eu faço o anúncio dessa bike
-    Choose File         ${INPUT_THUMBNAIL}   ${CURDIR}\\images\\${bike_json['thumb']}
+    Run Keyword If      '${bike_json['thumb']}' != ''   Choose File           ${INPUT_THUMBNAIL}   ${CURDIR}\\images\\${bike_json['thumb']}
     Clear Element Text  ${INPUT_NAME}
-    Input Text          ${INPUT_NAME}        ${bike_json['name']}
+    Input Text          ${INPUT_NAME}                   ${bike_json['name']}
     Clear Element Text  ${INPUT_BRAND}
-    Input Text          ${INPUT_BRAND}       ${bike_json['brand']}
-    Input Text          ${INPUT_PRICE}       ${bike_json['price']}
+    Input Text          ${INPUT_BRAND}                  ${bike_json['brand']}
+    Input Text          ${INPUT_PRICE}                  ${bike_json['price']}
     Click Button        ${BUTTON_SUBMIT}
 
 Então devo ver minha bike na lista de anúncios
