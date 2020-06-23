@@ -8,7 +8,7 @@ ${BASE_URL}  https://bikelov-anunciante.herokuapp.com/
 *** Keywords ***
 Start Session
     Open Browser        about:blank    chrome
-    Set Selenium Implicit Wait  5
+    Set Selenium Implicit Wait  10
     #Set Window Size     1440           900
 
 End Session
@@ -18,8 +18,7 @@ Logged With "${email}"
     Start Session
     Go To          ${BASE_URL}
     Input Text     ${INPUT_EMAIL}     ${email}
-    Click Element  ${BUTTON_LOGIN}
-    Wait Until Page Contains Element  ${DIV_DASHBOARD}     
+    Click Element  ${BUTTON_LOGIN}   
     Page Should Contain Element       ${DIV_DASHBOARD}
 
 End Test
