@@ -20,7 +20,7 @@ ${no_name}   {"thumb": "elleven.jpg", "name": "", "brand": "Shimano", "price": "
 ${no_brand}  {"thumb": "elleven.jpg", "name": "Elleven Rocker 27 Marchas", "brand": "", "price": "15"}
 
 *** Test Cases ***      bike            message
-#Não adiciona a foto     ${no_thumb}     Precisamos de uma foto para o anúncio!
+Não adiciona a foto     ${no_thumb}     Precisamos de uma foto para o seu anúncio!
 Não informa o nome      ${no_name}      Informe a descrição do anúncio!
 Não informa a marca     ${no_brand}     Informe a marca da sua Bike :)
 
