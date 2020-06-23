@@ -1,7 +1,8 @@
 *** Settings ***
-Library     OperatingSystem
-Library     RequestsLibrary
-Library     lib/mongo.py 
+Library    Collections
+Library    OperatingSystem
+Library    RequestsLibrary
+Library    lib/mongo.py 
 
 *** Variables ***
 ${base_url}  http://bikelov-api.herokuapp.com
