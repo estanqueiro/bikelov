@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../../resources/services.resource
+Resource    ../../../resources/services.resource
 
 Test Setup  Create Session  bikelov  ${base_url}
 
