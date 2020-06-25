@@ -1,7 +1,7 @@
 pipeline {
    agent {
        docker {
-           image 'python'
+           image 'estanqueiro/pywd'
        }
    }
 
@@ -15,7 +15,7 @@ pipeline {
       stage('Testes') {
           steps{
               echo 'Executando testes de regressão'
-              sh 'robot -d results -e todo tests/'
+              sh 'robot -d results -e todo -v BROWSER:headlesschrome tests/'
           }
       }
       stage('UAT') {

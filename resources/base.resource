@@ -4,10 +4,11 @@ Resource  elements.resource
 
 *** Variables ***
 ${BASE_URL}  https://bikelov-anunciante.herokuapp.com/
+${BROWSER}   chrome
 
 *** Keywords ***
 Start Session
-    Open Browser        about:blank    chrome
+    Open Browser        about:blank    ${BROWSER}
     Set Selenium Implicit Wait  10
     #Set Window Size     1440           900
 
