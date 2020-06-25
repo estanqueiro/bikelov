@@ -16,6 +16,7 @@ pipeline {
           steps{
               echo 'Executando testes de regressão'
               sh 'robot -d results -e todo -v BROWSER:headlesschrome tests/'
+              robot 'results'
           }
       }
       stage('UAT') {
