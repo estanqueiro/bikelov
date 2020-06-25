@@ -4,7 +4,7 @@ Documentation   Login
 ...             Sendo um usuário que possui um email
 ...             Quero poder iniciar uma nova sessão
 
-Resource  ../resources/steps_kw.resource
+Resource  ../../resources/steps_kw.resource
 
 Suite Setup      Start Session
 Suite Teardown   End Session

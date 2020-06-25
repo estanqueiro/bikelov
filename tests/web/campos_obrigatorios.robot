@@ -4,7 +4,7 @@ Documentation   Criar anúncio
 ...             Sendo um anunciante
 ...             Quero poder cadastrar um novo anúncio
 
-Resource  ../resources/steps_kw.resource
+Resource  ../../resources/steps_kw.resource
 
 Suite Setup     Run Keywords    Logged With "eu@papito.io"
 ...             AND             E eu acesso o formulário de cadastro de anúncios
