@@ -24,7 +24,7 @@ Get User Id
 
 #### /bikes
 Post Bike Ad
-    [Arguments]    ${user_id}           ${payload}        ${thumb}
+    [Arguments]    ${user_id}           ${payload}           ${thumb}
     &{headers}     Create Dictionary    user_id=${user_id}
     ${file_bin}    Get Binary File      ${CURDIR}/images/${thumb}
     &{files}       Create Dictionary    thumbnail=${file_bin}
@@ -32,7 +32,13 @@ Post Bike Ad
     [Return]       ${resp}
 
 Get Bike Ad By Id
-    [Arguments]    ${bike_id}    ${user_id}
+    [Arguments]    ${bike_id}           ${user_id}
     &{headers}     Create Dictionary    Content-Type=application/json    user_id=${user_id}
-    ${resp}        Get Request          bikelov    /bikes/${bike_id}    headers=${headers}
+    ${resp}        Get Request          bikelov    /bikes/${bike_id}     headers=${headers}
+    [Return]       ${resp}
+
+Delete Bike Ad By Id
+    [Arguments]    ${bike_id}           ${user_id}
+    &{headers}     Create Dictionary    Content-Type=application/json     user_id=${user_id}
+    ${resp}        Delete Request       bikelov    /bikes/${bike_id}      headers=${headers}
     [Return]       ${resp}
