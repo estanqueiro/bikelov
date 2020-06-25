@@ -30,3 +30,9 @@ Post Bike Ad
     &{files}       Create Dictionary    thumbnail=${file_bin}
     ${resp}        Post Request         bikelov    /bikes    data=${payload}    headers=${headers}    files=${files}
     [Return]       ${resp}
+
+Get Bike Ad By Id
+    [Arguments]    ${bike_id}    ${user_id}
+    &{headers}     Create Dictionary    Content-Type=application/json    user_id=${user_id}
+    ${resp}        Get Request          bikelov    /bikes/${bike_id}    headers=${headers}
+    [Return]       ${resp}
